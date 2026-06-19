@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>IT資格クイズ統合サイト</title>
+  <meta name="description" content="IT資格の4択クイズを資格別に学習できる統合サイト。各資格180問、ランダム50問出題、解説付き。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div>
+      <p class="eyebrow">IT Certification Quiz</p>
+      <h1>IT資格クイズ統合サイト</h1>
+      <p class="lead">各資格180問からランダム50問を出題。重複なし・4択・解説付き。</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="homeView" class="card">
+      <div class="section-title">
+        <h2>資格一覧</h2>
+        <span id="totalInfo" class="badge"></span>
+      </div>
+      <div class="toolbar">
+        <input id="searchInput" type="search" placeholder="資格名・カテゴリで検索">
+        <select id="categoryFilter">
+          <option value="all">すべてのカテゴリ</option>
+        </select>
+      </div>
+      <div id="examGrid" class="exam-grid"></div>
+    </section>
+
+    <section id="quizView" class="card hidden">
+      <button id="backBtn" class="link-btn">← 資格一覧に戻る</button>
+      <div class="quiz-head">
+        <div>
+          <p id="quizCategory" class="eyebrow"></p>
+          <h2 id="quizTitle"></h2>
+        </div>
+        <div class="score-box">
+          <span id="progressText">0 / 50</span>
+          <strong id="scoreText">正解 0</strong>
+        </div>
+      </div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <article class="question-box">
+        <h3 id="questionText"></h3>
+        <div id="choices" class="choices"></div>
+        <div id="explanation" class="explanation hidden"></div>
+      </article>
+      <div class="quiz-actions">
+        <button id="nextBtn" class="primary hidden">次の問題へ</button>
+        <button id="restartBtn" class="secondary hidden">もう一度50問</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>HTML / CSS / JavaScript only. GitHub Pages・Cloudflare Pages・Netlify・Vercelで公開できます。</p>
+  </footer>
+
+  <script src="data/registry.js"></script>
+  <script src="data/juniper-jncia.js"></script>
+  <script src="data/paloalto-pccet.js"></script>
+  <script src="data/fortinet-fca.js"></script>
+  <script src="data/nutanix-nca.js"></script>
+  <script src="data/uipath.js"></script>
+  <script src="data/power-platform-pl900.js"></script>
+  <script src="data/dynamics365.js"></script>
+  <script src="data/alibaba-cloud.js"></script>
+  <script src="data/tencent-cloud.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
